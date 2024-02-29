@@ -21,32 +21,32 @@
   </div>
 
   <div class="p-3 clas">
-    <form class="mt-20 p-3 bg-light w-75 pt-4 mx-auto rounded-lg ">
+    <form action="/contacto/procesar_formulario" method="post" class="mt-20 p-3 bg-light w-75 pt-4 mx-auto rounded-lg ">
       <div class="mb-3">
           <label for="floating_email" class="form-label">Email</label>
           <input type="email" class="form-control" id="floating_email" name="floating_email" placeholder=" " required>
       </div>
       <div class="mb-3">
-          <label for="floating_password" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="floating_password" name="floating_password" placeholder=" " required>
+          <label for="floating_nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="floating_nombre" name="floating_nombre" placeholder=" " required>
       </div>
       <div class="mb-3">
-          <label for="floating_repeat_password" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="floating_repeat_password" name="floating_repeat_password" placeholder=" " required>
+          <label for="floating_repeat_apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="floating_repeat_apellido" name="floating_repeat_apellido" placeholder=" " required>
       </div>
       <div class="row mb-3">
           <div class="col-md-6">
-              <label for="floating_first_name" class="form-label">Telefono</label>
-              <input type="tel" class="form-control" id="floating_first_name" name="floating_first_name" placeholder=" " required>
+              <label for="floating_telefono" class="form-label">Telefono</label>
+              <input type="tel" class="form-control" id="floating_telefono" name="floating_telefono" placeholder=" " required>
           </div>
           <div class="col-md-6">
-              <label for="floating_last_name" class="form-label">Fecha</label>
-              <input type="date" class="form-control" id="floating_last_name" name="floating_last_name" placeholder=" " required>
+              <label for="floating_fecha" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="floating_fecha" name="floating_fecha" placeholder=" " required>
           </div>
       </div>
       <div class="mb-3">
-          <label for="floating_phone" class="form-label">Motivo de la consulta</label>
-          <textarea class="form-control" id="floating_phone" name="floating_phone" rows="4" placeholder=" " required></textarea>
+          <label for="floating_consulta" class="form-label">Motivo de la consulta</label>
+          <textarea class="form-control" id="floating_consulta" name="floating_consulta" rows="4" placeholder=" " required></textarea>
       </div>
       <button type="submit" class="btn btn-primary btn-contacto">Enviar</button>
   </form>
