@@ -3,8 +3,8 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
 import dotenv from 'dotenv'
+import contactoRouter from './routes/contacto.router.js'
 import indexRouter from './routes/index.router.js'
-
 
 dotenv.config()
 
@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 app.use('/', indexRouter)
   
-app.use('/contacto', indexRouter)
+app.use('/contacto', contactoRouter)
 
 app.get('/galeria', (req, res)=>{
     const indexPath = join(__dirname, `../frontend/public/page/galeria.html`);
