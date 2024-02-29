@@ -1,11 +1,14 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import dotenv from 'dotenv'
+dotenv.config()
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import nodemailer from 'nodemailer';
-import bodyParser from 'body-parser';
 
+import nodemailer from 'nodemailer';
 
 export const enviarFormulario = (req, res) => {
     const { floating_email, floating_nombre, floating_repeat_apellido, floating_telefono, floating_fecha, floating_consulta} = req.body;
