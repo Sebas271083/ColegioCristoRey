@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
     const indexPath = join(__dirname, `../frontend/public/page/index.html`);
     const headerPath = join(__dirname, `../frontend/public/page/header.html`);
 
