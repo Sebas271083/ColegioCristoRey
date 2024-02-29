@@ -42,6 +42,7 @@ app.get('/contacto', (req, res) => {
 
 app.get('/galeria', (req, res)=>{
     const indexPath = join(__dirname, `../frontend/public/page/galeria.html`);
+    console.log()
     
     // Send the file
     res.sendFile(indexPath);
