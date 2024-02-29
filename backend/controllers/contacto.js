@@ -13,8 +13,8 @@ export const contacto = (req, res) => {
   };
 
   export const index = (req, res) => {
-    const indexPath = join(__dirname, `../frontend/public/page/index.html`);
-    const headerPath = join(__dirname, `../frontend/public/page/header.html`);
+    const indexPath = join(__dirname, `../../frontend/public/page/index.html`);
+    const headerPath = join(__dirname, `../../frontend/public/page/header.html`);
 
     
     // Send the file
