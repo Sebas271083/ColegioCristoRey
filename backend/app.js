@@ -2,7 +2,10 @@ import express from 'express'
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
+import dotenv from 'dotenv'
 
+
+dotenv.config()
 
 const app = express()
 
@@ -37,7 +40,7 @@ app.get('/contacto', (req, res) => {
     console.log(indexPath);
   });
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 
 app.listen(PORT, ()=> {
