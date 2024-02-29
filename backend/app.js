@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import path from 'path';
 import dotenv from 'dotenv'
+import indexRouter from './routes/index.router.js'
 
 
 dotenv.config()
@@ -32,13 +33,16 @@ app.get('/', (req, res) => {
   });
 
   
-app.get('/contacto', (req, res) => {
-    const indexPath = join(__dirname, `../frontend/public/page/contacto.html`);
+// app.get('/contacto', (req, res) => {
+//     const indexPath = join(__dirname, `../frontend/public/page/contacto.html`);
     
-    // Send the file
-    res.sendFile(indexPath);
-    console.log(indexPath);
-  });
+//     // Send the file
+//     res.sendFile(indexPath);
+//     console.log(indexPath);
+//   });
+
+app.use('/toys', toysRouter)
+app.use('/contacto', indexRouter)
 
 app.get('/galeria', (req, res)=>{
     const indexPath = join(__dirname, `../frontend/public/page/galeria.html`);
