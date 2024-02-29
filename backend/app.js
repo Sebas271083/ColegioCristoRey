@@ -41,7 +41,6 @@ app.get('/', (req, res) => {
 //     console.log(indexPath);
 //   });
 
-app.use('/toys', toysRouter)
 app.use('/contacto', indexRouter)
 
 app.get('/galeria', (req, res)=>{
