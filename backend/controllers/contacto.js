@@ -23,7 +23,7 @@ export const enviarFormulario = (req, res) => {
   
     // Configura el contenido del correo
     const mailOptions = {
-      from: email,
+      from: floating_email,
       to: 'sebdelgado83@gmail.com',
       subject: 'Nuevo mensaje de contacto',
       text: `Nombre: ${floating_nombre}\nEmail: ${floating_email}\nMensaje: ${floating_consulta}`
