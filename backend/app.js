@@ -5,6 +5,7 @@ import path from 'path';
 import dotenv from 'dotenv'
 import contactoRouter from './routes/contacto.router.js'
 import indexRouter from './routes/index.router.js'
+import bodyParser from 'body-parser';
 
 dotenv.config()
 
@@ -31,7 +32,7 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 //     console.log(indexPath);
 //   });
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', indexRouter)
   
 app.use('/contacto', contactoRouter)
