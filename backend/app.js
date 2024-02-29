@@ -20,27 +20,20 @@ app.use(express.static(path.join(__dirname, '../frontend/public')));
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
 
-app.get('/', (req, res) => {
-    const indexPath = join(__dirname, `../frontend/public/page/index.html`);
-    const headerPath = join(__dirname, `../frontend/public/page/header.html`);
+// app.get('/', (req, res) => {
+//     const indexPath = join(__dirname, `../frontend/public/page/index.html`);
+//     const headerPath = join(__dirname, `../frontend/public/page/header.html`);
 
-    
-    // Send the file
-    res.sendFile(indexPath);
-    res.sendFile(headerPath);
-
-    console.log(indexPath);
-  });
-
-  
-// app.get('/contacto', (req, res) => {
-//     const indexPath = join(__dirname, `../frontend/public/page/contacto.html`);
     
 //     // Send the file
 //     res.sendFile(indexPath);
+//     res.sendFile(headerPath);
+
 //     console.log(indexPath);
 //   });
 
+app.use('/', indexRouter)
+  
 app.use('/contacto', indexRouter)
 
 app.get('/galeria', (req, res)=>{
